@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
 import { Spinner } from 'react-bootstrap';
+import Banner from './Banner/Banner';
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
 
     return (
         <div>
-            <p>home</p>
+            <Banner></Banner>
         </div>
     );
 };

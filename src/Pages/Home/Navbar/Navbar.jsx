@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
 import { Button, Image } from 'react-bootstrap';
+import logo from '../../../../public/logo/logo.png'
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -15,6 +16,9 @@ const Navbar = () => {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-warning justify-content-center">
                 <ul className="navbar-nav align-items-center d-flex justify-content-around">
+                    <li className="nav-item active p-1">
+                        <Image style={{ width: "40px", height: "40px" }} src={logo} roundedCircle></Image>
+                    </li>
                     <li className="nav-item active p-1">
                         <NavLink id='home' className='text-decoration-none'>
                             UltimateToyVerse
@@ -30,16 +34,28 @@ const Navbar = () => {
                             All Toys
                         </NavLink>
                     </li>
-                    <li className="nav-item active p-1">
-                        <NavLink id='home' className='text-decoration-none' to={"/"}>
-                            My Toy
-                        </NavLink>
-                    </li>
-                    <li className="nav-item active p-1">
-                        <NavLink id='home' className='text-decoration-none' to={"/"}>
-                            Add a Toy
-                        </NavLink>
-                    </li>
+                    {
+                        user ?
+                            <li className="nav-item active p-1">
+
+                                <NavLink id='home' className='text-decoration-none' to={"/"}>
+                                    My Toys
+                                </NavLink>
+
+                            </li>
+                            : ""
+                    }
+                    {
+                        user ?
+                            <li className="nav-item active p-1">
+
+                                <NavLink id='home' className='text-decoration-none' to={"/"}>
+                                    Add a Toy
+                                </NavLink>
+
+                            </li>
+                            : ""
+                    }
                     <li className="nav-item p-1">
                         <NavLink id='blog' className='text-decoration-none' to={"/"}>
                             Blogs
@@ -50,7 +66,7 @@ const Navbar = () => {
                             user ?
                                 <>
                                     <span className='p-1'>
-                                        <Image title={user.displayName} className='' style={{ width: "50px", height: "50px" }} src={user.photoURL} roundedCircle></Image>
+                                        <Image title={user.displayName} className='' style={{ width: "40px", height: "40px" }} src={user.photoURL} roundedCircle></Image>
                                     </span>
                                     <Button className='btn-danger' onClick={handleLogOut}>
                                         Signout
