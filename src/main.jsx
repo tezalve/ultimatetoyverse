@@ -5,16 +5,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>Hello world!</div>,
-  },
-]);
+import 'bootstrap/dist/css/bootstrap.min.css';
+import router from './routes/Routes';
+import AuthProviders from './providers/AuthProviders';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProviders>
+      <RouterProvider router={router} />
+    </AuthProviders>
   </React.StrictMode>,
 )
