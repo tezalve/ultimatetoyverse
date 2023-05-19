@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className='bg-dark text-white mt-5'>
-            <div className='row p-5 text-center align-items-center'>
+            <div className='row p-5 g-0 text-center align-items-center'>
                 <div className='col-md-4'>
                     <h3 className='text-warning'>UltimateToyVerse</h3>
                     <p>Unleash Your Heroic Adventures!</p>

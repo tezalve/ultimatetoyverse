@@ -4,13 +4,13 @@ import transformer from '../../../../public/images/transformer.png'
 const Banner = () => {
     return (
         <div>
-            <div className='bg-dark row p-5 text-white text-center align-items-center'>
+            <div className='bg-dark row p-5 text-white text-center align-items-center g-0'>
                 <div className='col-lg-5 p-1'>
                     <h1 className='text-warning'>Premium Toys For Kids</h1>
                     <p>The Best Toys Are The Ones That Make Your Kids Feel Like They're Getting The Real Deal</p>
                 </div>
                 <div className='col-lg-5 p-1'>
-                    <img width={"100%"} src={transformer} alt="story" />
+                    <img width={"100%"} src={transformer} />
                 </div>
                 <div className='col-lg-2 p-1'>
                     <div>

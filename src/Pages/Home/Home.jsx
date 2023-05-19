@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
 import { Spinner } from 'react-bootstrap';
 import Banner from './Banner/Banner';
+import Gallery from './Gallery/Gallery';
 
 const Home = () => {
 
@@ -18,6 +19,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <Gallery></Gallery>
         </div>
     );
 };
