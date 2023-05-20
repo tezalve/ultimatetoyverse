@@ -48,11 +48,11 @@ const Addtoy = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Seller Name</Form.Label>
-                    <Form.Control name='seller_name' type="text" value={user?.displayName} placeholder="Enter Seller Name" />
+                    <Form.Control name='seller_name' type="text" defaultValue={user?.displayName} placeholder="Enter Seller Name" />
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Seller Email address</Form.Label>
-                    <Form.Control name='seller_email' type="email" value={user?.email} placeholder="Enter Seller Email address" />
+                    <Form.Control name='seller_email' type="email" defaultValue={user?.email} placeholder="Enter Seller Email address" />
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Category</Form.Label>
