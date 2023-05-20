@@ -5,6 +5,10 @@ import { Button, Form } from 'react-bootstrap';
 const Alltoyspage = () => {
 
     const [toys, setToys] = useState([]);
+    const [filteredtoys, setFilteredtoys] = useState([]);
+    const [isSearching, setIsSearching] = useState(false);
+
+    const [searchedToy, setSearchedToy] = useState('');
 
     useEffect(() => {
         fetch('http://localhost:5000/toys')
@@ -17,10 +21,12 @@ const Alltoyspage = () => {
         const form = event.target;
         const search = form.search.value;
         console.log(search);
-        const searchedtoys = toys.filter(toy => 
+        const searchedtoys = toys.filter(toy =>
             toy.toy_name.toLowerCase().includes(search.toLowerCase())
         );
-        setToys(searchedtoys);
+        setFilteredtoys(searchedtoys);
+        setSearchedToy(search);
+        setIsSearching(true);
     };
 
     return (
@@ -37,10 +43,20 @@ const Alltoyspage = () => {
 
             <div className='bg-dark text-white p-5'>
                 {
-                    toys?.slice(0, 20).map(toy => <Alltoys
-                        key={toy._id}
-                        toy={toy}
-                    ></Alltoys>)
+                    isSearching ?
+                        filteredtoys.length > 0 ?
+                            filteredtoys?.slice(0, 20).map(toy => <Alltoys
+                                key={toy._id}
+                                toy={toy}
+                            ></Alltoys>)
+                            :
+                            <p className='text-white text-center'>No Toy Found By The Name "{searchedToy}"</p>
+                        :
+                        toys?.slice(0, 20).map(toy => <Alltoys
+                            key={toy._id}
+                            toy={toy}
+                        ></Alltoys>)
+
                 }
             </div>
         </div>
