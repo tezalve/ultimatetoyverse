@@ -37,8 +37,8 @@ const Navbar = () => {
                     {
                         user ?
                             <li className="nav-item active p-1">
-
-                                <NavLink id='home' className='text-decoration-none' to={"/mytoys"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
+                                {/* had to encode the email string so the route works, decoded in server */}
+                                <NavLink id='home' className='text-decoration-none' to={`/mytoys/${btoa(user.email)}`} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                                     My Toys
                                 </NavLink>
 

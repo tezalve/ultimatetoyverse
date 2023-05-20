@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../providers/AuthProviders';
+import { useLoaderData } from 'react-router-dom';
 
 const Mytoyspage = () => {
 
-    const [toys, setToys] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/toys')
-            .then(res => res.json())
-            .then(data => setToys(data))
-    }, [])
+    const { user } = useContext(AuthContext);
+    const toy = useLoaderData();
 
     return (
         <div>
