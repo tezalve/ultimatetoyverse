@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
-import { Spinner } from 'react-bootstrap';
+import {  Spinner } from 'react-bootstrap';
 import Banner from './Banner/Banner';
 import Gallery from './Gallery/Gallery';
+import Categories from './Categories/Categories';
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Gallery></Gallery>
+            <Categories></Categories>
         </div>
     );
 };
