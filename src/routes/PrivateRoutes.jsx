@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProviders';
 import { Navigate, useLocation } from 'react-router-dom';
 import {  Spinner } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 
 const PrivateRoute = ({ children }) => {
 
@@ -19,6 +20,9 @@ const PrivateRoute = ({ children }) => {
 
     if (user) {
         return children;
+    }
+    else{
+        toast.warn("Please Log In First")
     }
 
     // saving the last route before login 

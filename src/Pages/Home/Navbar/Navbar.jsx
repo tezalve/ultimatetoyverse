@@ -49,7 +49,7 @@ const Navbar = () => {
                         user ?
                             <li className="nav-item active p-1">
 
-                                <NavLink id='home' className='text-decoration-none' to={"/"}>
+                                <NavLink id='home' className='text-decoration-none' to={"/addtoy"}>
                                     Add a Toy
                                 </NavLink>
 

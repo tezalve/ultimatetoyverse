@@ -34,11 +34,11 @@ const Categories = () => {
                 </TabList>
 
                 <TabPanel>
-                    <CardGroup className='row g-0 text-center align-items-center justify-content-center'>
+                    <CardGroup className='row g-0 text-center align-items-center'>
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
                             <Card.Img width="100%" height="400px" variant="top" src={toys[0]?.picture} />
                             <Card.Body>
-                                <Card.Title>{toys[0]?.name}</Card.Title>
+                                <Card.Title>{toys[0]?.toy_name}</Card.Title>
                                 <Card.Text>
                                     Price: {toys[0]?.price}
                                 </Card.Text>
@@ -51,7 +51,7 @@ const Categories = () => {
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
                             <Card.Img width="100%" height="400px" variant="top" src={toys[1]?.picture} />
                             <Card.Body>
-                                <Card.Title>{toys[1]?.name}</Card.Title>
+                                <Card.Title>{toys[1]?.toy_name}</Card.Title>
                                 <Card.Text>
                                     Price: {toys[1]?.price}
                                 </Card.Text>
@@ -64,11 +64,11 @@ const Categories = () => {
                     </CardGroup>
                 </TabPanel>
                 <TabPanel>
-                    <CardGroup className='row g-0 text-center align-items-center justify-content-center'>
+                    <CardGroup className='row g-0 text-center align-items-center'>
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
                             <Card.Img width="100%" height="400px" variant="top" src={toys[2]?.picture} />
                             <Card.Body>
-                                <Card.Title>{toys[2]?.name}</Card.Title>
+                                <Card.Title>{toys[2]?.toy_name}</Card.Title>
                                 <Card.Text>
                                     Price: {toys[2]?.price}
                                 </Card.Text>
@@ -81,7 +81,7 @@ const Categories = () => {
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
                             <Card.Img width="100%" height="400px" variant="top" src={toys[3]?.picture} />
                             <Card.Body>
-                                <Card.Title>{toys[3]?.name}</Card.Title>
+                                <Card.Title>{toys[3]?.toy_name}</Card.Title>
                                 <Card.Text>
                                     Price: {toys[3]?.price}
                                 </Card.Text>
@@ -94,11 +94,11 @@ const Categories = () => {
                     </CardGroup>
                 </TabPanel>
                 <TabPanel>
-                    <CardGroup className='row g-0 text-center align-items-center justify-content-center'>
+                    <CardGroup className='row g-0 text-center align-items-center'>
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
                             <Card.Img width="100%" height="400px" variant="top" src={toys[4]?.picture} />
                             <Card.Body>
-                                <Card.Title>{toys[4]?.name}</Card.Title>
+                                <Card.Title>{toys[4]?.toy_name}</Card.Title>
                                 <Card.Text>
                                     Price: {toys[4]?.price}
                                 </Card.Text>
@@ -111,7 +111,7 @@ const Categories = () => {
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
                             <Card.Img width="100%" height="400px" variant="top" src={toys[5]?.picture} />
                             <Card.Body>
-                                <Card.Title>{toys[5]?.name}</Card.Title>
+                                <Card.Title>{toys[5]?.toy_name}</Card.Title>
                                 <Card.Text>
                                     Price: {toys[5]?.price}
                                 </Card.Text>
