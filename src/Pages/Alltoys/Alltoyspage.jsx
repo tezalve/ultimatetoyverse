@@ -14,7 +14,7 @@ const Alltoyspage = () => {
     return (
         <div className='bg-dark text-white p-5'>
             {
-                toys.map(toy => <Alltoys
+                toys.slice(0, 20).map(toy => <Alltoys
                 key={toy._id}
                 toy={toy}
                 ></Alltoys>)
