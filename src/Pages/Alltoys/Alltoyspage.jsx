@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Alltoys from './Alltoys';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const Alltoyspage = () => {
 
@@ -28,6 +29,15 @@ const Alltoyspage = () => {
         setSearchedToy(search);
         setIsSearching(true);
     };
+
+    const { user, loading } = useContext(AuthContext);
+    if (loading) {
+        return (
+            <div>
+                <Spinner style={{ position: "fixed", left: "50%" }} animation="border" variant="primary" />
+            </div>
+        );
+    }
 
     return (
         <div>

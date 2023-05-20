@@ -9,12 +9,15 @@ const Mytoyspage = () => {
     const toys = useLoaderData();
 
     return (
-        <div>
+        <div className='bg-dark p-5'>
             {
+                toys.length > 0?
                 toys.map(toy => <Mytoys
                 key={toy._id}
                 toy={toy}
                 ></Mytoys>)
+                :
+                <p className='text-white text-center'>No Toys To Show</p>
             }
         </div>
     );
