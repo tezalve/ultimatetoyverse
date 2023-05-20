@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Alltoys from './Alltoys';
 
 const Alltoyspage = () => {
 
@@ -11,9 +12,12 @@ const Alltoyspage = () => {
     }, [])
 
     return (
-        <div>
+        <div className='bg-dark text-white p-5'>
             {
-                
+                toys.map(toy => <Alltoys
+                key={toy._id}
+                toy={toy}
+                ></Alltoys>)
             }
         </div>
     );
