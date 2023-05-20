@@ -1,15 +1,21 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
 import { useLoaderData } from 'react-router-dom';
+import Mytoys from './Mytoys';
 
 const Mytoyspage = () => {
 
     const { user } = useContext(AuthContext);
-    const toy = useLoaderData();
+    const toys = useLoaderData();
 
     return (
         <div>
-            my toys
+            {
+                toys.map(toy => <Mytoys
+                key={toy._id}
+                toy={toy}
+                ></Mytoys>)
+            }
         </div>
     );
 };
