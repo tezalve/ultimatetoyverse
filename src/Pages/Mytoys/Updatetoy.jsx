@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const Updatetoy = () => {
 
+    const { user } = useContext(AuthContext);
     const toy = useLoaderData();
+
+    const navigate = useNavigate();
 
     const handleUpdatetoy = () => {
         event.preventDefault();
-        const id = toy._id;
+        const _id = toy._id;
         const form = event.target;
         const picture = form.picture.value;
         const toy_name = form.toy_name.value;
@@ -19,9 +24,9 @@ const Updatetoy = () => {
         const rating = form.rating.value;
         const available_quantity = form.available_quantity.value;
         const detail_description = form.detail_description.value;
-        const updatetoy = {id, picture, toy_name, seller_name, seller_email, price, rating, available_quantity, category, detail_description }
-        fetch("http://localhost:5000/addtoy", {
-            method: "POST",
+        const updatetoy = {_id, picture, toy_name, seller_name, seller_email, price, rating, available_quantity, category, detail_description }
+        fetch("http://localhost:5000/updatetoy", {
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -32,7 +37,7 @@ const Updatetoy = () => {
                 console.log(data);
             })
         form.reset();
-        toast.success(`Successfully Updated toy of ID: "${id}"`)
+        toast.success(`Successfully Updated toy of ID: "${_id}"`)
     }
 
     return (
