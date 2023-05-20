@@ -13,7 +13,13 @@ const Alltoys = ({ toy }) => {
                         Price: {toy?.price}
                     </Card.Text>
                     <Card.Text>
-                        Rating: {toy?.rating}
+                        Seller: {toy?.seller_name}
+                    </Card.Text>
+                    <Card.Text>
+                        Sub-Category: {toy?.category}
+                    </Card.Text>
+                    <Card.Text>
+                        Available Quantity: {toy?.available_quantity}
                     </Card.Text>
                     <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toy?._id}`}>View Details</Link></Button>
                 </Card>

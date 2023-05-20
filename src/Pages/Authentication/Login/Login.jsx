@@ -75,8 +75,9 @@ const Login = () => {
                     </Button>
                     <p className='text-danger'>{error}</p>
                     <Link style={{ color: "grey" }} to={'/registration'}>
-                        <p>New To UltimateToyVerse??</p>
+                        New To UltimateToyVerse??
                     </Link>
+                    <br />
                     <Button style={{ marginRight: "10px" }} onClick={handleGoogleSingIn} variant="info">
                         Google Login
                     </Button>
