@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
 import { Button, Image } from 'react-bootstrap';
 import logo from '../../../../public/logo/logo.png'
@@ -20,17 +20,17 @@ const Navbar = () => {
                         <Image style={{ width: "40px", height: "40px" }} src={logo} roundedCircle></Image>
                     </li>
                     <li className="nav-item active p-1">
-                        <NavLink id='home' className='text-decoration-none'>
+                        <Link id='home' className='text-decoration-none' style={{ color: 'black' }}>
                             UltimateToyVerse
-                        </NavLink>
+                        </Link>
                     </li>
                     <li className="nav-item active p-1">
-                        <NavLink id='home' className='text-decoration-none' to={"/"}>
+                        <NavLink id='home' className='text-decoration-none' to={"/"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                             Home
                         </NavLink>
                     </li>
                     <li className="nav-item active p-1">
-                        <NavLink id='home' className='text-decoration-none' to={"/alltoys"}>
+                        <NavLink id='home' className='text-decoration-none' to={"/alltoys"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                             All Toys
                         </NavLink>
                     </li>
@@ -38,7 +38,7 @@ const Navbar = () => {
                         user ?
                             <li className="nav-item active p-1">
 
-                                <NavLink id='home' className='text-decoration-none' to={"/"}>
+                                <NavLink id='home' className='text-decoration-none' to={"/mytoys"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                                     My Toys
                                 </NavLink>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
                         user ?
                             <li className="nav-item active p-1">
 
-                                <NavLink id='home' className='text-decoration-none' to={"/addtoy"}>
+                                <NavLink id='home' className='text-decoration-none' to={"/addtoy"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                                     Add a Toy
                                 </NavLink>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
                             : ""
                     }
                     <li className="nav-item p-1">
-                        <NavLink id='blog' className='text-decoration-none' to={"/"}>
+                        <NavLink id='blog' className='text-decoration-none' to={"/"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                             Blogs
                         </NavLink>
                     </li>
@@ -74,7 +74,7 @@ const Navbar = () => {
                                 </>
                                 :
                                 <>
-                                    <NavLink id='login' className='text-decoration-none' to={"/login"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid grey", color: 'red' } : { color: 'grey' })}>
+                                    <NavLink id='login' className='text-decoration-none' to={"/login"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                                         Login
                                     </NavLink>
                                 </>
