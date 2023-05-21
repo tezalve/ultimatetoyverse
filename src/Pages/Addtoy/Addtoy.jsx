@@ -2,8 +2,11 @@ import React, { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { AuthContext } from '../../providers/AuthProviders';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const Addtoy = () => {
+
+    const pageTitle = 'Ultimate Toy Verse | Add Toy'
 
     const { user } = useContext(AuthContext);
 
@@ -37,6 +40,8 @@ const Addtoy = () => {
 
     return (
         <div className='bg-dark p-5 w-50 mx-auto mt-5 shadow text-white'>
+        <Helmet><title>{pageTitle}</title></Helmet>
+
             <Form onSubmit={handleAddtoy}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Picture URL</Form.Label>
@@ -44,23 +49,23 @@ const Addtoy = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Toy Name</Form.Label>
-                    <Form.Control name='toy_name' type="text" placeholder="Enter Toy Name" />
+                    <Form.Control name='toy_name' type="text" placeholder="Enter Toy Name" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Seller Name</Form.Label>
-                    <Form.Control name='seller_name' type="text" defaultValue={user?.displayName} placeholder="Enter Seller Name" />
+                    <Form.Control name='seller_name' type="text" defaultValue={user?.displayName} placeholder="Enter Seller Name" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Seller Email address</Form.Label>
-                    <Form.Control name='seller_email' type="email" defaultValue={user?.email} placeholder="Enter Seller Email address" />
+                    <Form.Control name='seller_email' type="email" defaultValue={user?.email} placeholder="Enter Seller Email address" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Category</Form.Label>
-                    <Form.Control name='category' type="text" placeholder="Enter Category" />
+                    <Form.Control name='category' type="text" placeholder="Enter Category" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Price</Form.Label>
-                    <Form.Control name='price' type="number" step="0.01" placeholder="Enter Price" />
+                    <Form.Control name='price' type="number" step="0.01" placeholder="Enter Price" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Rating</Form.Label>
@@ -68,7 +73,7 @@ const Addtoy = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Available Quantity</Form.Label>
-                    <Form.Control name='available_quantity' type="number" placeholder="Enter Quantity" />
+                    <Form.Control name='available_quantity' type="number" placeholder="Enter Quantity" required/>
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Detail Description</Form.Label>

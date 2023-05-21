@@ -3,8 +3,11 @@ import { AuthContext } from '../../providers/AuthProviders';
 import { useLoaderData } from 'react-router-dom';
 import Mytoys from './Mytoys';
 import { Button } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 
 const Mytoyspage = () => {
+
+    const pageTitle = 'Ultimate Toy Verse | Mytoys'
 
     const { user } = useContext(AuthContext);
     const toys = useLoaderData();
@@ -25,6 +28,7 @@ const Mytoyspage = () => {
 
     return (
         <div className='bg-dark p-5'>
+            <Helmet><title>{pageTitle}</title></Helmet>
             {
                 toys.length > 0 ?
                     <div className='text-center'>

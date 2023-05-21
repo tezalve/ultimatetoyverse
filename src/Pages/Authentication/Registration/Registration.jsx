@@ -4,8 +4,12 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
 import { updateProfile } from 'firebase/auth';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const Registration = () => {
+
+    const pageTitle = 'Ultimate Toy Verse | Registration'
+
     const { user, createUser } = useContext(AuthContext);
     const [perror, setPerror] = useState('');
 
@@ -66,6 +70,8 @@ const Registration = () => {
 
     return (
         <div className='mx-auto w-50 pt-5'>
+            <Helmet><title>{pageTitle}</title></Helmet>
+
             <div className='shadow p-3 mb-5 bg-dark rounded text-light'>
                 <h3 className='text-center py-4 text-warning'>Register</h3>
                 <Form onSubmit={handleRegister}>

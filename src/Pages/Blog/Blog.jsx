@@ -1,8 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Blog = () => {
+    const pageTitle = 'Ultimate Toy Verse | Blogs'
     return (
+
         <div className='bg-dark text-white p-5'>
+            <Helmet><title>{pageTitle}</title></Helmet>
+
             <h1 className='text-warning'>What is an access token and refresh token? How do they work and where should we store them on the client-side?</h1>
             <p>All the information required by the server to determine whether the user or device may access the resource you are seeking is contained in the access token. Usually, these are tokens that have expired or have a short validity time. <br />
                 A fresh access token is created using the refresh token. The user would typically need to authenticate once again in order to get an access token if the access token had an expiration date. The user may continue to access the application resources by skipping this step if they have a refresh token and instead making a request to the API to obtain a new access token. Access tokens can be kept in HTTP-only cookies. Because cookies cannot be retrieved by JavaScript in this method, the risk of cross-site scripting attacks is reduced. However, other factors like CSRF protection can be necessary.
@@ -32,7 +37,7 @@ const Blog = () => {
             </p>
             <h1 className='text-warning'>What is MongoDB aggregate and how does it work?</h1>
             <p>You may carry out sophisticated data aggregation operations on MongoDB collections using the robust aggregation framework known as MongoDB's aggregate. It offers a versatile and effective method for handling, transforming, and analyzing data. <br />
-            To alter and change data, the aggregate operation passes it through a number of phases. Each step in the pipeline applies a particular operation on the input data before sending the results to the following stage. Filtering, grouping, sorting, projecting, and doing different calculations on the data are a few examples of the steps.</p>
+                To alter and change data, the aggregate operation passes it through a number of phases. Each step in the pipeline applies a particular operation on the input data before sending the results to the following stage. Filtering, grouping, sorting, projecting, and doing different calculations on the data are a few examples of the steps.</p>
         </div>
     );
 };

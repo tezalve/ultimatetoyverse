@@ -2,8 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import Alltoys from './Alltoys';
 import { Button, Form, Spinner } from 'react-bootstrap';
 import { AuthContext } from '../../providers/AuthProviders';
+import { Helmet } from 'react-helmet';
 
 const Alltoyspage = () => {
+
+    const pageTitle = 'Ultimate Toy Verse | Alltoys'
 
     const [toys, setToys] = useState([]);
     const [filteredtoys, setFilteredtoys] = useState([]);
@@ -41,6 +44,7 @@ const Alltoyspage = () => {
 
     return (
         <div>
+            <Helmet><title>{pageTitle}</title></Helmet>
             <Form className='bg-dark p-3 w-50 mx-auto m-3 shadow text-white' onSubmit={handleSearch}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Search</Form.Label>
@@ -60,7 +64,7 @@ const Alltoyspage = () => {
                                 toy={toy}
                             ></Alltoys>)
                             :
-                            <p className='text-white text-center'>No Toy Found By The Name "{searchedToy}"</p>
+                            <p className='text-white text-center'>No match by the keyword "{searchedToy}"</p>
                         :
                         toys?.slice(0, 20).map(toy => <Alltoys
                             key={toy._id}

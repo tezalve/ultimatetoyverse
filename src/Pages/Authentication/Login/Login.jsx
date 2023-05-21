@@ -3,8 +3,11 @@ import { Button, Form, Spinner } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProviders';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
+
+    const pageTitle = 'Ultimate Toy Verse | Login'
 
     const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
@@ -58,6 +61,8 @@ const Login = () => {
 
     return (
         <div className='mx-auto w-50 pt-5'>
+            <Helmet><title>{pageTitle}</title></Helmet>
+
             <div className='shadow p-3 mb-5 bg-dark rounded text-light'>
                 <h3 className='text-center py-4 text-warning'>Login</h3>
                 <Form onSubmit={handleLogin} >

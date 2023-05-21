@@ -8,12 +8,9 @@ import PrivateRoute from "./PrivateRoutes";
 import Addtoy from "../Pages/Addtoy/Addtoy";
 import Alltoyspage from "../Pages/Alltoys/Alltoyspage";
 import Mytoyspage from "../Pages/Mytoys/Mytoyspage";
-import Mytoys from "../Pages/Mytoys/Mytoys";
 import Updatetoy from "../Pages/Mytoys/Updatetoy";
 import Notfound from "../Pages/Notfound/Notfound";
 import Blog from "../Pages/Blog/Blog";
-
-
 
 const router = createBrowserRouter([
   {

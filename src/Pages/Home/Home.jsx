@@ -8,8 +8,11 @@ import Wehave from './Wehave/Wehave';
 import Review from './Review/Review';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
+
+    const pageTitle = 'Ultimate Toy Verse | Home'
 
     const { loading } = useContext(AuthContext);
 
@@ -27,6 +30,7 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet><title>{pageTitle}</title></Helmet>
             <Banner></Banner>
             <Gallery></Gallery>
             <Categories></Categories>
