@@ -24,7 +24,8 @@ const Categories = () => {
 
     return (
         <div className='pt-5 text-center bg-dark text-white mt-5'>
-            <Tabs>
+            <h1 className='text-center text-warning'>Shop By Category</h1>
+            <Tabs className='p-5'>
                 <TabList>
                     {
                         categories.map(category => <Tab

@@ -24,10 +24,10 @@ const Footer = () => {
             </div>
 
             <div className='text-center'>
-                <Link className='p-1'>Facebook</Link>
-                <Link className='p-1'>Twitter</Link>
-                <Link className='p-1'>MySpace</Link>
-                <Link className='p-1'>Twitch</Link>
+                <Link className='p-1 text-decoration-none text-info'>Facebook</Link>
+                <Link className='p-1 text-decoration-none text-info'>Twitter</Link>
+                <Link className='p-1 text-decoration-none text-info'>MySpace</Link>
+                <Link className='p-1 text-decoration-none text-info'>Twitch</Link>
             </div>
 
             <div className='pt-3'> 

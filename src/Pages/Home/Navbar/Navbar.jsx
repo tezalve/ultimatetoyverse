@@ -14,7 +14,7 @@ const Navbar = () => {
     }
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-warning justify-content-center">
+            <nav className="navbar navbar-expand-lg navbar-light justify-content-center">
                 <ul className="navbar-nav align-items-center d-flex justify-content-around">
                     <li className="nav-item active p-1">
                         <Image style={{ width: "40px", height: "40px" }} src={logo} roundedCircle></Image>
@@ -57,7 +57,7 @@ const Navbar = () => {
                             : ""
                     }
                     <li className="nav-item p-1">
-                        <NavLink id='blog' className='text-decoration-none' to={"/"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
+                        <NavLink id='blog' className='text-decoration-none' to={"/blog"} style={({ isActive }) => (isActive ? { borderBottom: "2px solid black", color: 'red' } : { color: 'black' })}>
                             Blogs
                         </NavLink>
                     </li>
