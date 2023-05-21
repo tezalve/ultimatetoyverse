@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet';
+import { AuthContext } from '../../providers/AuthProviders';
+import { Spinner } from 'react-bootstrap';
 
 const Blog = () => {
     const pageTitle = 'Ultimate Toy Verse | Blogs'
+    const { user, loading } = useContext(AuthContext);
+    if (loading) {
+        return (
+            <div>
+                <Spinner style={{ position: "fixed", left: "50%" }} animation="border" variant="primary" />
+            </div>
+        );
+    }
     return (
-
         <div className='bg-dark text-white p-5'>
             <Helmet><title>{pageTitle}</title></Helmet>
 
