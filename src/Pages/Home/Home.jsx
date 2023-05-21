@@ -4,6 +4,7 @@ import {  Spinner } from 'react-bootstrap';
 import Banner from './Banner/Banner';
 import Gallery from './Gallery/Gallery';
 import Categories from './Categories/Categories';
+import Wehave from './Wehave/Wehave';
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Categories></Categories>
+            <Wehave></Wehave>
         </div>
     );
 };
