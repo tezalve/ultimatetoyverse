@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../providers/AuthProviders';
-import {  Spinner } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import Banner from './Banner/Banner';
 import Gallery from './Gallery/Gallery';
 import Categories from './Categories/Categories';
 import Wehave from './Wehave/Wehave';
 import Review from './Review/Review';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
 
     const { loading } = useContext(AuthContext);
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     if (loading) {
         return (
@@ -24,8 +30,13 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Categories></Categories>
-            <Wehave></Wehave>
-            <Review></Review>
+            <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <Wehave></Wehave>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+                <Review></Review>
+            </div>
+
         </div>
     );
 };
