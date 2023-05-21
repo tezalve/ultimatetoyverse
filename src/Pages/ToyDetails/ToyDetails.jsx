@@ -20,6 +20,7 @@ const ToyDetails = () => {
             <div className='col-md-6 p-5'>
                 <p>Seller Name: {toy.seller_name}</p>
                 <p>Seller Email: {toy.seller_email}</p>
+                <p>Sub Category: {toy.category}</p>
                 <p>Price: ${toy.price}</p>
                 <p>Rating: {toy.rating}</p>
                 <p>Quantity: {toy.available_quantity}</p>

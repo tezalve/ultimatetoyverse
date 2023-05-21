@@ -25,7 +25,7 @@ const Updatetoy = () => {
         const available_quantity = form.available_quantity.value;
         const detail_description = form.detail_description.value;
         const updatetoy = {_id, picture, toy_name, seller_name, seller_email, price, rating, available_quantity, category, detail_description }
-        fetch("http://localhost:5000/updatetoy", {
+        fetch("https://ultimatetoyverse-server.vercel.app/updatetoy", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const Updatetoy = () => {
                 console.log(data);
             })
         form.reset();
-        toast.success(`Successfully Updated toy of ID: "${_id}"`)
+        toast.success(`Successfully Updated toy of ID: "${_id}"`);
     }
 
     return (

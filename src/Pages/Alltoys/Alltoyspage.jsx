@@ -15,7 +15,7 @@ const Alltoyspage = () => {
     const [searchedToy, setSearchedToy] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://ultimatetoyverse-server.vercel.app/toys')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])

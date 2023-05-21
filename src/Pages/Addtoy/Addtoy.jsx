@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { AuthContext } from '../../providers/AuthProviders';
 import { toast } from 'react-toastify';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
 
 const Addtoy = () => {
 
@@ -23,7 +24,7 @@ const Addtoy = () => {
         const available_quantity = form.available_quantity.value;
         const detail_description = form.detail_description.value;
         const toy = {picture, toy_name, seller_name, seller_email, price, rating, available_quantity, category, detail_description}
-        fetch("http://localhost:5000/addtoy", {
+        fetch("https://ultimatetoyverse-server.vercel.app/addtoy", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

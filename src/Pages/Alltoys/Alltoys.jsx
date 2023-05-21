@@ -21,7 +21,7 @@ const Alltoys = ({ toy }) => {
                     <Card.Text>
                         Available Quantity: {toy?.available_quantity}
                     </Card.Text>
-                    <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toy?._id}`}>View Details</Link></Button>
+                    <Link className='text-decoration-none btn btn-warning' to={`/toydetails/${toy?._id}`}>View Details</Link>
                 </Card>
             }
         </div>

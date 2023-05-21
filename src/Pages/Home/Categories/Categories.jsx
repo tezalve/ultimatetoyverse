@@ -8,7 +8,7 @@ const Categories = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://ultimatetoyverse-server.vercel.app/toys')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])
@@ -17,7 +17,7 @@ const Categories = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://ultimatetoyverse-server.vercel.app/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
@@ -46,7 +46,7 @@ const Categories = () => {
                                 <Card.Text>
                                     Rating: {toys[0]?.rating}
                                 </Card.Text>
-                                <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toys[0]?._id}`}>View Details</Link></Button>
+                                <Link className='text-decoration-none btn btn-warning' to={`/toydetails/${toys[0]?._id}`}>View Details</Link>
                             </Card.Body>
                         </Card>
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
@@ -59,7 +59,7 @@ const Categories = () => {
                                 <Card.Text>
                                     Rating: {toys[1]?.rating}
                                 </Card.Text>
-                                <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toys[1]?._id}`}>View Details</Link></Button>
+                                <Link className='text-decoration-none btn btn-warning' to={`/toydetails/${toys[1]?._id}`}>View Details</Link>
                             </Card.Body>
                         </Card>
                     </CardGroup>
@@ -76,7 +76,7 @@ const Categories = () => {
                                 <Card.Text>
                                     Rating: {toys[2]?.rating}
                                 </Card.Text>
-                                <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toys[2]?._id}`}>View Details</Link></Button>
+                                <Link className='text-decoration-none btn btn-warning' to={`/toydetails/${toys[2]?._id}`}>View Details</Link>
                             </Card.Body>
                         </Card>
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
@@ -89,7 +89,7 @@ const Categories = () => {
                                 <Card.Text>
                                     Rating: {toys[3]?.rating}4                                    
                                 </Card.Text>
-                                    <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toys[3]?._id}`}>View Details</Link></Button>
+                                    <Link className='text-decoration-none btn btn-warning' to={`/toydetails/${toys[3]?._id}`}>View Details</Link>
                             </Card.Body>
                         </Card>
                     </CardGroup>
@@ -106,7 +106,7 @@ const Categories = () => {
                                 <Card.Text>
                                     Rating: {toys[4]?.rating}
                                 </Card.Text>
-                                <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toys[4]?._id}`}>View Details</Link></Button>
+                                <Link className='text-decoration-none btn btn-warning' to={`/toydetails/${toys[4]?._id}`}>View Details</Link>
                             </Card.Body>
                         </Card>
                         <Card className='col-md-6 m-5 bg-dark text-white' style={{ width: '18rem' }}>
@@ -119,7 +119,7 @@ const Categories = () => {
                                 <Card.Text>
                                     Rating: {toys[5]?.rating}
                                 </Card.Text>
-                                <Button variant="warning"><Link className='text-decoration-none' to={`/toydetails/${toys[5]?._id}`}>View Details</Link></Button>
+                                <Link className='text-decoration-none btn btn-warning' to={`/toydetails/${toys[5]?._id}`}>View Details</Link>
                             </Card.Body>
                         </Card>
                     </CardGroup>

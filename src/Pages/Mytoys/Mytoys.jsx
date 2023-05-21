@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 const Mytoys = ({ toy }) => {
 
     const handleDelete = (_id) => {
-        fetch(`http://localhost:5000/deletetoy/${_id}`, {
+        fetch(`https://ultimatetoyverse-server.vercel.app/deletetoy/${_id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -32,8 +32,8 @@ const Mytoys = ({ toy }) => {
                     <Card.Text>
                         Sub-Category: {toy?.category}
                     </Card.Text>
-                    <Button variant="info"><Link className='text-decoration-none text-dark' to={`/updatetoy/${toy._id}`}>Update</Link></Button>
-                    <Button onClick={() => handleDelete(toy._id)} variant="danger"><Link className='text-decoration-none text-dark'>Delete</Link></Button>
+                    <Link className='text-decoration-none text-dark btn btn-info' to={`/updatetoy/${toy._id}`}>Update</Link>
+                    <Button onClick={() => handleDelete(toy._id)} variant="danger">Delete</Button>
                 </Card>
             }
         </div>

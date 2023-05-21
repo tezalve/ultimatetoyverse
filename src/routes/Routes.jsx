@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/toydetails/:id",
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toydetails/${params.id}`)
+        loader: ({ params }) => fetch(`https://ultimatetoyverse-server.vercel.app/toydetails/${params.id}`)
       },
       {
         path: "/addtoy",
@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       {
         path: "/mytoys/:email",
         element: <PrivateRoute><Mytoyspage></Mytoyspage></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/mytoys/${params.email}`)
+        loader: ({ params }) => fetch(`https://ultimatetoyverse-server.vercel.app/mytoys/${params.email}`)
       },
       {
         path: "/updatetoy/:id",
         element: <PrivateRoute><Updatetoy></Updatetoy></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toydetails/${params.id}`)
+        loader: ({ params }) => fetch(`https://ultimatetoyverse-server.vercel.app/toydetails/${params.id}`)
       },
       {
         path: "/blog",

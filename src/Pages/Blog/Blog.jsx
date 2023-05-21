@@ -22,7 +22,7 @@ const Blog = () => {
                 A fresh access token is created using the refresh token. The user would typically need to authenticate once again in order to get an access token if the access token had an expiration date. The user may continue to access the application resources by skipping this step if they have a refresh token and instead making a request to the API to obtain a new access token. Access tokens can be kept in HTTP-only cookies. Because cookies cannot be retrieved by JavaScript in this method, the risk of cross-site scripting attacks is reduced. However, other factors like CSRF protection can be necessary.
             </p>
             <h1 className='text-warning'>Compare SQL and NoSQL databases?</h1>
-            <p>
+            <div>
                 SQL Databases:
                 <ul>
                     <li>Use tables, columns, and rows to organize data.</li>
@@ -40,7 +40,7 @@ const Blog = () => {
                     <li>Offer varying levels of ACID compliance, often sacrificing strict consistency for performance and scalability.</li>
                     <li>Use different query languages or APIs specific to their data model.</li>
                 </ul>
-            </p>
+            </div>
             <h1 className='text-warning'>What is express js? What is Nest JS?</h1>
             <p>A simple web application framework for Node.js is called Express.js. It offers a straightforward and adaptable collection of tools for creating APIs and web apps. Express.js gives programmers the ability to manage middleware, build routes, process HTTP requests, and generate dynamic views. It is renowned for its portability, simplicity of use, and wide range of middleware and plugins. <br /> A full-featured, progressive framework for creating scalable and maintainable server-side applications is NestJS, on the other hand. It is based on Node.js and makes use of TypeScript to create strong, enterprise-level apps. Object-oriented, functional, and reactive programming ideas are all included into NestJS. It stresses modularity, dependency injection, and adheres to MVC (Model-View-Controller) architectural conventions. A strong and opinionated framework offered by NestJS promotes best practices, code organization, and testability.
             </p>
