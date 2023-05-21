@@ -24,7 +24,7 @@ const Mytoys = ({ toy }) => {
                     <Card.Img style={{ width: "20%", height: "100px" }} variant="top" src={toy?.picture} />
                     <Card.Title className='text-warning'>{toy?.toy_name}</Card.Title>
                     <Card.Text>
-                        Price: {toy?.price}
+                        Price: ${toy?.price}
                     </Card.Text>
                     <Card.Text>
                         Seller: {toy?.seller_name}

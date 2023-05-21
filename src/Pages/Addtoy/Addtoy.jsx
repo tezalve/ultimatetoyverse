@@ -60,7 +60,7 @@ const Addtoy = () => {
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Price</Form.Label>
-                    <Form.Control name='price' type="number" placeholder="Enter Price" />
+                    <Form.Control name='price' type="number" step="0.01" placeholder="Enter Price" />
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Label>Rating</Form.Label>

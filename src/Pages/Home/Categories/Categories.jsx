@@ -41,7 +41,7 @@ const Categories = () => {
                             <Card.Body>
                                 <Card.Title className='text-warning'>{toys[0]?.toy_name}</Card.Title>
                                 <Card.Text>
-                                    Price: {toys[0]?.price}
+                                    Price: ${toys[0]?.price}
                                 </Card.Text>
                                 <Card.Text>
                                     Rating: {toys[0]?.rating}
@@ -54,7 +54,7 @@ const Categories = () => {
                             <Card.Body>
                                 <Card.Title className='text-warning'>{toys[1]?.toy_name}</Card.Title>
                                 <Card.Text>
-                                    Price: {toys[1]?.price}
+                                    Price: ${toys[1]?.price}
                                 </Card.Text>
                                 <Card.Text>
                                     Rating: {toys[1]?.rating}
@@ -71,7 +71,7 @@ const Categories = () => {
                             <Card.Body>
                                 <Card.Title className='text-warning'>{toys[2]?.toy_name}</Card.Title>
                                 <Card.Text>
-                                    Price: {toys[2]?.price}
+                                    Price: ${toys[2]?.price}
                                 </Card.Text>
                                 <Card.Text>
                                     Rating: {toys[2]?.rating}
@@ -84,7 +84,7 @@ const Categories = () => {
                             <Card.Body>
                                 <Card.Title className='text-warning'>{toys[3]?.toy_name}</Card.Title>
                                 <Card.Text>
-                                    Price: {toys[3]?.price}
+                                    Price: ${toys[3]?.price}
                                 </Card.Text>
                                 <Card.Text>
                                     Rating: {toys[3]?.rating}4                                    
@@ -101,7 +101,7 @@ const Categories = () => {
                             <Card.Body>
                                 <Card.Title className='text-warning'>{toys[4]?.toy_name}</Card.Title>
                                 <Card.Text>
-                                    Price: {toys[4]?.price}
+                                    Price: ${toys[4]?.price}
                                 </Card.Text>
                                 <Card.Text>
                                     Rating: {toys[4]?.rating}
@@ -114,7 +114,7 @@ const Categories = () => {
                             <Card.Body>
                                 <Card.Title className='text-warning'>{toys[5]?.toy_name}</Card.Title>
                                 <Card.Text>
-                                    Price: {toys[5]?.price}
+                                    Price: ${toys[5]?.price}
                                 </Card.Text>
                                 <Card.Text>
                                     Rating: {toys[5]?.rating}
