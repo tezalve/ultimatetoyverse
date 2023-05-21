@@ -5,6 +5,7 @@ import Banner from './Banner/Banner';
 import Gallery from './Gallery/Gallery';
 import Categories from './Categories/Categories';
 import Wehave from './Wehave/Wehave';
+import Review from './Review/Review';
 
 const Home = () => {
 
@@ -24,6 +25,7 @@ const Home = () => {
             <Gallery></Gallery>
             <Categories></Categories>
             <Wehave></Wehave>
+            <Review></Review>
         </div>
     );
 };

@@ -7,7 +7,7 @@ const Wehave = () => {
     return (
         <div className='bg-dark text-white mt-5'>
             <h1 className='text-warning text-center p-5'>What We Have</h1>
-            <div className='text-center row'>
+            <div className='text-center row g-0'>
                 <div className='col-md-3'>
                     <Image className='tr' width={"100%"} src={mando}></Image>
                 </div>

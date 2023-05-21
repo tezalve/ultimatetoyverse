@@ -1,5 +1,6 @@
 import React from 'react';
 import transformer from '../../../../public/images/transformer.png'
+import './Banner.css'
 
 const Banner = () => {
     return (
@@ -10,7 +11,7 @@ const Banner = () => {
                     <p>The Best Action Figures Are The Ones That Make Your Kids Feel Like They're Getting The Real Deal</p>
                 </div>
                 <div className='col-lg-5 p-1'>
-                    <img width={"100%"} src={transformer} />
+                    <img className='tr' width={"100%"} src={transformer} />
                 </div>
                 <div className='col-lg-2 p-1'>
                     <div>
