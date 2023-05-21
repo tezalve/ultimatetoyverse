@@ -37,6 +37,7 @@ const Updatetoy = () => {
                 console.log(data);
             })
         toast.success(`Successfully Updated toy of ID: "${_id}"`);
+        navigate(`/`);
     }
 
     return (

@@ -6,14 +6,18 @@ import { toast } from 'react-toastify';
 const Mytoys = ({ toy }) => {
 
     const handleDelete = (_id) => {
-        fetch(`https://ultimatetoyverse-server.vercel.app/deletetoy/${_id}`, {
-            method: "DELETE"
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
+        var result = confirm("Are you sure you want to delete?");
+
+        if (result) {
+            fetch(`https://ultimatetoyverse-server.vercel.app/deletetoy/${_id}`, {
+                method: "DELETE"
             })
-        toast.success(`"${toy.toy_name}" deleted succesfully`);
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                })
+            toast.success(`"${toy.toy_name}" deleted succesfully`);
+        }
     }
 
     return (
