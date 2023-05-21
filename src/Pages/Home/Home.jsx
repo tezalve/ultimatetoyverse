@@ -30,10 +30,10 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Categories></Categories>
-            <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
                 <Wehave></Wehave>
             </div>
-            <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
                 <Review></Review>
             </div>
 

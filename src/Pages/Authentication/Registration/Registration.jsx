@@ -66,8 +66,8 @@ const Registration = () => {
 
     return (
         <div className='mx-auto w-50 pt-5'>
-            <div className='shadow p-3 mb-5 bg-white rounded'>
-                <h3 className='text-center py-4'>Register</h3>
+            <div className='shadow p-3 mb-5 bg-dark rounded text-light'>
+                <h3 className='text-center py-4 text-warning'>Register</h3>
                 <Form onSubmit={handleRegister}>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Name</Form.Label>

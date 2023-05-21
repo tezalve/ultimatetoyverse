@@ -58,8 +58,8 @@ const Login = () => {
 
     return (
         <div className='mx-auto w-50 pt-5'>
-            <div className='shadow p-3 mb-5 bg-white rounded'>
-                <h3 className='text-center py-4'>Login</h3>
+            <div className='shadow p-3 mb-5 bg-dark rounded text-light'>
+                <h3 className='text-center py-4 text-warning'>Login</h3>
                 <Form onSubmit={handleLogin} >
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
@@ -74,11 +74,12 @@ const Login = () => {
                         Login
                     </Button>
                     <p className='text-danger'>{error}</p>
-                    <Link style={{ color: "grey" }} to={'/registration'}>
+                    <Link className='text-light' to={'/registration'}>
                         New To UltimateToyVerse??
                     </Link>
                     <br />
-                    <Button style={{ marginRight: "10px" }} onClick={handleGoogleSingIn} variant="info">
+                    <br />
+                    <Button style={{ marginRight: "10px" }} onClick={handleGoogleSingIn} variant="danger">
                         Google Login
                     </Button>
                 </Form>
