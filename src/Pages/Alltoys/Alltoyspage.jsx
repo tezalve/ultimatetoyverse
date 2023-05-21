@@ -59,7 +59,7 @@ const Alltoyspage = () => {
                 {
                     isSearching ?
                         filteredtoys.length > 0 ?
-                            filteredtoys?.slice(0, 20).map(toy => <Alltoys
+                            filteredtoys?.map(toy => <Alltoys
                                 key={toy._id}
                                 toy={toy}
                             ></Alltoys>)
