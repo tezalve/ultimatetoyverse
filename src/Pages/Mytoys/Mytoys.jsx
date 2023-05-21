@@ -14,7 +14,6 @@ const Mytoys = ({ toy }) => {
                 console.log(data);
             })
         toast.success(`"${toy.toy_name}" deleted succesfully`);
-        window.location.reload();
     }
 
     return (
