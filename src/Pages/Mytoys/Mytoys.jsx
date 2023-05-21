@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../providers/AuthProviders';
 
 const Mytoys = ({ toy }) => {
+
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleDelete = (_id) => {
         var result = confirm("Are you sure you want to delete?");
@@ -17,6 +21,7 @@ const Mytoys = ({ toy }) => {
                     console.log(data);
                 })
             toast.success(`"${toy.toy_name}" deleted succesfully`);
+            navigate(`/mytoys/${btoa(user.email)}`);
         }
     }
 

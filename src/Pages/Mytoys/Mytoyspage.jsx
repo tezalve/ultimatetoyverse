@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../providers/AuthProviders';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Mytoys from './Mytoys';
 import { Button } from 'react-bootstrap';
@@ -8,13 +7,12 @@ import { Helmet } from 'react-helmet';
 const Mytoyspage = () => {
 
     const pageTitle = 'Ultimate Toy Verse | Mytoys'
-
-    const { user } = useContext(AuthContext);
     const toys = useLoaderData();
     const [sorted, setSorted] = useState(false);
     const [sortedToys, setSortedtoys] = useState('');
 
     const aSort = () => {
+        
         setSortedtoys([...toys].sort((a, b) => a.price - b.price))
         setSorted(true);
     }
